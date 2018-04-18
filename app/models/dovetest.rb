@@ -1,0 +1,2 @@
+class Dovetest < ApplicationRecord
+end
