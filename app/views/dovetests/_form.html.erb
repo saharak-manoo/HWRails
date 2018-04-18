@@ -1,0 +1,32 @@
+<%= form_with(model: dovetest, local: true) do |form| %>
+  <% if dovetest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dovetest.errors.count, "error") %> prohibited this dovetest from being saved:</h2>
+
+      <ul>
+      <% dovetest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :dovetest_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :dovetest_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :login %>
+    <%= form.text_field :login, id: :dovetest_login %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

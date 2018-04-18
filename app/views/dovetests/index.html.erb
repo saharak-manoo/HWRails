@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dovetests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Login</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dovetests.each do |dovetest| %>
+      <tr>
+        <td><%= dovetest.name %></td>
+        <td><%= dovetest.email %></td>
+        <td><%= dovetest.login %></td>
+        <td><%= link_to 'Show', dovetest %></td>
+        <td><%= link_to 'Edit', edit_dovetest_path(dovetest) %></td>
+        <td><%= link_to 'Destroy', dovetest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dovetest', new_dovetest_path %>

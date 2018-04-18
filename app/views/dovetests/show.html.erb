@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dovetest.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @dovetest.email %>
+</p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @dovetest.login %>
+</p>
+
+<%= link_to 'Edit', edit_dovetest_path(@dovetest) %> |
+<%= link_to 'Back', dovetests_path %>
